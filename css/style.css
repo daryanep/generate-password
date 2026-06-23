@@ -1,0 +1,267 @@
+:root {
+    /* Background */
+    --clr-bg: #0F172A;
+    --clr-surface: #1E293B;
+
+    /* Brand */
+    --clr-primary: #3B82F6;
+    --clr-secondary: #6366F1;
+    --clr-accent: #06B6D4;
+
+    /* Text */
+    --clr-text-primary: #F8FAFC;
+    --clr-text-secondary: #94A3B8;
+
+    /* UI */
+    --clr-border: #334155;
+    --clr-hover: #60A5FA;
+
+    /* Status */
+    --clr-success: #22C55E;
+    --clr-warning: #F59E0B;
+    --clr-error: #EF4444;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-bg);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    color: var(--clr-text-primary);
+    line-height: 1.2;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: var(--clr-text-secondary);
+    line-height: 1.6;
+}
+
+.navbar {
+    color: var(--clr-text-primary);
+
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--clr-bg);
+    border-bottom: 2px solid var(--clr-accent);
+
+    padding: 0 3rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.generate-btn {
+    cursor: pointer;
+
+    font-size: 1.5rem;
+
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+    padding: 6px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.generate-btn:hover {
+    transform: translateY(-4px);
+    transition: 0.3s ease;
+}
+
+.generate-btn:active {
+    transform: translateY(0px);
+    transition: 0.3s ease;
+}
+
+.btn-copy {
+    cursor: pointer;
+
+    border: none;
+
+    transition: 0.3s ease;
+}
+
+.btn-copy:hover {
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+.btn-copy:active {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+.container {
+    margin: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.section {
+    width: 100%;
+}
+
+.hero-container {
+    margin-top: 3rem;
+    height: 500px;
+
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.hero-container div {
+    max-width: 500px;
+}
+
+
+
+#log, #log2 {
+    color: var(--clr-text-primary);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#length-el {
+    margin-inline: auto;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+}
+
+label {
+    font-size: 1.5rem;
+
+    color: var(--clr-text-primary);
+    margin-bottom: 10px;
+}
+
+.password {
+    color: var(--clr-text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--clr-surface);
+
+    width: 200px;
+    height: 40px;
+
+    gap: 5px;
+
+    padding: 10px;
+
+    border-radius: 13px;
+
+    text-align: center;
+}
+
+.password button {
+    cursor: pointer;
+
+    padding: 0 10px;
+    color: var(--clr-text-primary);
+    border: none;
+
+    background-color: inherit;
+
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 600px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: var(--clr-border);
+
+    padding: 2rem 3rem;
+
+    max-width: 700px;
+
+    border-radius: 12px;
+}
+
+.card h2 {
+    margin-bottom: 3rem;
+}
+
+.password-card {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2rem 0;
+}
+
+@media (max-width: 700px) {
+    .password-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-container {
+        margin-bottom: 2rem;
+    }
+}

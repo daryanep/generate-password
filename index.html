@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>daryan. | GeneratePassword</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="">daryan.</a>
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#log">Generate</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="section">
+        <div class="hero-container">
+          <div>
+            <h1>Generate A Powerfull Password</h1>
+            <p>Make a powerfull random password for better security.</p>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <h2>Password Generator</h2>
+            <input
+              type="text"
+              id="length-el"
+              placeholder="Enter your password length"
+            />
+            <div class="password-card">
+              <div class="password">
+                <p id="log"></p>
+                <button class="btn-copy" onclick="copyToClipboard1()">Copy</button>
+              </div>
+              <div class="password">
+                <p id="log2"></p>
+                <button class="btn-copy" onclick="copyToClipboard2()">Copy</button>
+              </div>
+            </div>
+
+            <button class="generate-btn" onclick="getRandomPassword()">
+              Generate Password
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
