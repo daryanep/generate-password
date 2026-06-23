@@ -4,7 +4,7 @@ Simple password generator built with HTML, CSS, and JavaScript.
 
 ## Live Demo
 
-https://your-live-demo-link.com
+https://password-generator-daryan.netlify.app/
 
 ## Features
 
