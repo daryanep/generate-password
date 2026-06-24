@@ -244,6 +244,20 @@ label {
     margin-bottom: 3rem;
 }
 
+.number {
+    color: white;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.symbols {
+    color: white;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
 .password-card {
     gap: 50px;
     display: flex;

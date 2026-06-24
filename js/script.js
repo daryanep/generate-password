@@ -1,22 +1,24 @@
-const characters = [
+let letters = [
     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
     "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
 
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
     "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
-
-    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-
-    "!", "@", "#", "$", "%", "&", "*", "?", "_", "-"
 ];
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+const symbols = ["!", "@", "#", "$", "%", "&", "*", "?", "_", "-"]
+
+let characters = []
 
 let logEl = document.getElementById("log")
 let logEl2 = document.getElementById("log2")
 
+let numbersCheck = document.getElementById("number")
+let symbolsCheck = document.getElementById("symbols")
+
 let password = ""
 
-let randomIndex = []
-
+characters.push(...letters)
 
 // FUNCTION
 function getRandomPassword() {
@@ -29,11 +31,41 @@ function getRandomIndex() {
 }
 
 function getPassword1() {
+    if (numbersCheck.checked) {
+        characters.push(...numbers)
+    }
+
+    if (symbolsCheck.checked) {
+        characters.push(...symbols)
+    }
+
     logEl.textContent = ""
-    
+
     for (let i = 0; i < getValue(); i++) {
         logEl.textContent += characters[getRandomIndex()]
     }
+
+    characters = []
+    characters.push(...letters)
+}
+
+function getPassword2() {
+    if (numbersCheck.checked) {
+        characters.push(...numbers)
+    }
+
+    if (symbolsCheck.checked) {
+        characters.push(...symbols)
+    }
+
+    logEl2.textContent = ""
+
+    for (let i = 0; i < getValue(); i++) {
+        logEl2.textContent += characters[getRandomIndex()]
+    }
+
+    characters = []
+    characters.push(...letters)
 }
 
 function getValue() {
@@ -41,13 +73,6 @@ function getValue() {
     return passwordLength.value
 }
 
-function getPassword2() {
-    logEl2.textContent = ""
-    
-    for (let i = 0; i < getValue(); i++) {
-        logEl2.textContent += characters[getRandomIndex()]
-    }
-}
 
 function copyToClipboard1() {
     navigator.clipboard.writeText(logEl.textContent)

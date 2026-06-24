@@ -31,6 +31,9 @@
         <div class="card-container">
           <div class="card">
             <h2>Password Generator</h2>
+            <div class="number"><input type="checkbox" id="number" />Number</div>
+            <div class="symbols"><input type="checkbox" id="symbols" />Symbols</div>
+
             <input
               type="text"
               id="length-el"
@@ -39,11 +42,15 @@
             <div class="password-card">
               <div class="password">
                 <p id="log"></p>
-                <button class="btn-copy" onclick="copyToClipboard1()">Copy</button>
+                <button class="btn-copy" onclick="copyToClipboard1()">
+                  Copy
+                </button>
               </div>
               <div class="password">
                 <p id="log2"></p>
-                <button class="btn-copy" onclick="copyToClipboard2()">Copy</button>
+                <button class="btn-copy" onclick="copyToClipboard2()">
+                  Copy
+                </button>
               </div>
             </div>
 
